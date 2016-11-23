@@ -57,22 +57,19 @@
 				}else{
 					$(this).removeClass("contab");
 				}
-				var daclick = $("ul li a").click();
 				var aclick = $(".soup ul li a").click();
 				var bclick = $(".allsheep").click();
 				var cclick = $(".person").click();
-				if(daclick){
-					$("#contab").addClass("contab");
 					if(aclick){
+						$("#contab").addClass("contab");
 						$(".tab img").attr("src","images/sheepb.png");
 					}else if(bclick){
+						$("#contab").addClass("contab");
 						$(".tab img").attr("src","images/sh.png");
 					}else if(cclick){
+						$("#contab").addClass("contab");
 						$(".tab img").attr("src","images/sheepd.png");
 					}
-				}else{
-					$("#contab").removeClass("contab");
-				}
    		});
     </script>
 </head>
