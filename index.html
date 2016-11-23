@@ -16,16 +16,18 @@
    		
    		$(function(){
    			var atop=0;
-				    setInterval(function(){
+   			$(document).ready(function () { 
+				    $(window).scroll(function () {
 			        var wortop = $(window).scrollTop();
-			        var atop = $(".soup").offset().top;
-			         var btop = $(".allsheep").offset().top;
-			          var ctop = $(".person").offset().top;
+			        atop = $(".soup").offset().top;
+							btop = $(".allsheep").offset().top;
+							ctop = $(".person").offset().top;
 				      if(wortop < atop){
-		   					$("#contab").css("position","relative");
+		   					$("#contab").removeClass("contab");
 		   					$(".tab img").attr("src","images/navbai.jpg");
 		   				}else if(wortop > atop){
-		   					$("#contab").css({"position":"fixed","left":0,"top":0,"z-index":10});
+		   					
+		   					$("#contab").addClass("contab");
 		   					$(".tab img").attr("src","images/sheepb.png");
 			   					if(wortop > btop-20){
 			   						$(".tab img").attr("src","images/sh.png");
@@ -34,21 +36,43 @@
 						   				}
 			   					}
 		   				}
-				    },10);
+				    });
+				});
+				//console.log(atop);
 				$(".intaba a").click(function(){
-								$("#contab").css({"position":"fixed","left":0,"top":0,"z-index":10});
-								$(".tab img").attr("src","images/sheepb.png");
-								$(window).scrollTop(240);
-								
-							});
-							$(".intabb a").click(function(){
-								$(".tab img").attr("src","images/sh.png");
-								
-							});
-							$(".intabc a").click(function(){
-								$(".tab img").attr("src","images/sheepd.png");
-							});
-			
+					$("#contab").addClass("contab");
+					$(".tab img").attr("src","images/sheepb.png");
+					$(window).scrollTop(240);
+					
+				});
+				$(".intabb a").click(function(){
+					$(".tab img").attr("src","images/sh.png");
+					
+				});
+				$(".intabc a").click(function(){
+					$(".tab img").attr("src","images/sheepd.png");
+				});
+				if($("#contab").is("contab")){
+					$(this).addClass("contab");
+				}else{
+					$(this).removeClass("contab");
+				}
+				var daclick = $("ul li a").click();
+				var aclick = $(".soup ul li a").click();
+				var bclick = $(".allsheep").click();
+				var cclick = $(".person").click();
+				if(daclick){
+					$("#contab").addClass("contab");
+					if(aclick){
+						$(".tab img").attr("src","images/sheepb.png");
+					}else if(bclick){
+						$(".tab img").attr("src","images/sh.png");
+					}else if(cclick){
+						$(".tab img").attr("src","images/sheepd.png");
+					}
+				}else{
+					$("#contab").removeClass("contab");
+				}
    		});
     </script>
 </head>
