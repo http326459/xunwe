@@ -1,0 +1,28 @@
+/*ss重置样式  */
+body,div,i,a,p,span,b,input,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dd,dt,textarea,img{margin:0;padding:0;}
+body{font-family: microsoft yahei;color:#333;}
+i,b{font-style: normal;}
+a{text-decoration:none;}
+img{vertical-align:top;width: 100%;}
+input,textarea,select,textarea,img{resize: none;outline: none;border: none;}
+li{list-style: none}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.clearfix:after{content: '';display: block;height:0;clear: both;font-size:0;*zoom:1}
+
+
+#index{margin: 0;padding:0;}
+#index .header{position: relative;}
+#index .header a{display: block;position: absolute;right:0px;top:0px;}
+#index .header a img{width:60px;}
+#index .contab{position:fixed;left:0;top:0;}
+#index #contab .tab{position:relative;font-size: 26px;text-align:center;z-index:10;}
+#index #contab .tab div{height:73px;}
+#index #contab .tab div a{display:block;width:100%;height:100%;margin:0;}
+#index #contab .intaba{position:absolute;left:0;top:0;width:33.5%;}
+#index #contab .intaba a{margin-left:20%;}
+#index #contab .intabb{position:absolute;left:33.5%;top:0;width:31%;}
+#index #contab .intabc{position:absolute;right:0;top:0;width:32%;}
+#index #contab .intabc a{text-align:left;}
+#index .footer{background: url(../images/bot_02.jpg) no-repeat;min-height:200px;background-size: 100%;position: relative;}
+#index .footer a{position: absolute;left:50%;bottom: 50%;margin-left:-40%;width: 80%;}
+
